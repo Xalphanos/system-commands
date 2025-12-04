@@ -5,6 +5,16 @@ commented examples. Each script reads the same `data/sample_data.txt` fixture an
 with what each tool is doing. The scripts are meant to be read like annotated tutorials: skim the inline comments, run the
 examples, and edit them to experiment with different patterns.
 
+If you are new to these tools, walk through the scripts in this order:
+
+1. Run `sed_showcase.sh` to see how addresses, substitutions, and buffers work.
+2. Move to `awk_showcase.sh` to practice field selection, formatting, and summaries.
+3. Finish with `grep_showcase.sh` to compare plain string searches with regular expressions and context flags.
+
+After each section, try editing the patterns (for example, change the salary threshold or add a new department) and rerun the
+script to see how the output changes. Treat the files as a playground: break them, fix them, and observe how small changes alter
+the results.
+
 ## Files
 - `data/sample_data.txt`: Structured sample data with a header comment, IDs, names, departments, and salaries. The first line is a
   comment so you can see how each tool handles non-data lines.
