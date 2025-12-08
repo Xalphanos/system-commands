@@ -1,0 +1,12 @@
+## script.awk
+
+
+{
+    sum += $1
+}
+END {
+    if (sum / NR > 0.5)
+        print "not"
+    else
+        print "naught"
+}

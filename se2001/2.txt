@@ -1,0 +1,15 @@
+## script.sh
+
+#!/bin/bash
+awk -F: '$1 == "phone" || $1 == "credit" {
+    val = $2
+    len = length(val)
+    is_pal = 1
+    for (i = 1; i <= len / 2; i++) {
+        if (substr(val, i, 1) != substr(val, len - i + 1, 1)) {
+            is_pal = 0
+            break
+        }
+    }
+    if (is_pal) print $0
+}'

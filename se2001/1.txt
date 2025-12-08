@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+while IFS= read -r dir; do
+        [[ -n "$dir" ]]
+        mkdir -p "$dir"
+done
+
+
+# create.sh
