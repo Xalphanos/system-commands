@@ -46,7 +46,7 @@ for arg in "$@"; do
     have_num=1
 
 
-    else:
+    else
         if ["$num" lt "$min"]; then
             min=$num
         fi 

@@ -1,23 +1,23 @@
-#script.sh
+  #script.sh
 
-#!/usr/bin/env bash
-read -r t || exit 0
-t=${t%$'\r'}
-i=0
-while [ "$i" -lt "$t" ]; do
-  if ! read -r n; then
-    break
-  fi
-  n=${n%$'\r'}
-  sum=0
-  j=1
-  while [ "$j" -le "$n" ]; do
-    ((sum+=j*j*j))
-    j=$((j+2))
+  #!/usr/bin/env bash
+  read -r t || exit 0
+  t=${t%$'\r'}
+  i=0
+  while [ "$i" -lt "$t" ]; do
+    if ! read -r n; then
+      break
+    fi
+    n=${n%$'\r'}
+    sum=0
+    j=1
+    while [ "$j" -le "$n" ]; do
+      ((sum+=j*j*j))
+      j=$((j+2))
+    done
+    printf '%s\n' "$sum"
+    if ((sum % 2 != 0)); then
+      break
+    fi
+    i=$((i+1))
   done
-  printf '%s\n' "$sum"
-  if ((sum % 2 != 0)); then
-    break
-  fi
-  i=$((i+1))
-done
