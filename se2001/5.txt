@@ -1,5 +1,6 @@
 ## script.awk
 
+# Compute the average of the first column and print a word based on a 0.5 threshold.
 
 {
     sum += $1

@@ -1,6 +1,7 @@
   #script.sh
 
   #!/usr/bin/env bash
+  # For each input count, sum cubes of odd numbers up to N; stop early if a sum is odd.
   read -r t || exit 0
   t=${t%$'\r'}
   i=0

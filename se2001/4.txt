@@ -1,4 +1,5 @@
 ## script.sed
 
+# Lowercase text after lines starting with low:, uppercase text after lines starting with up:.
 s/^low:(.*)/\L\1/
 s/^up:(.*)/\U\1/

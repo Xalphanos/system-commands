@@ -1,6 +1,7 @@
 ## script.sh
 
 #!/bin/bash
+# Print lines whose first field is phone/credit and whose value is a palindrome; expects ':' delimiter.
 awk -F: '$1 == "phone" || $1 == "credit" {
     val = $2
     len = length(val)

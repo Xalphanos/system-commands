@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Read directory names from stdin and create them if they are not empty lines.
 
 while IFS= read -r dir; do
         [[ -n "$dir" ]]
