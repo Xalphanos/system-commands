@@ -1,3 +1,4 @@
+# Practice solution script for Problem2; see the embedded assignment notes.
 : '
 Write a script to print the users(one on each line) who are logged in successfully. Extract the information from the file named myauth.log located in the current working directory. The output should contain usernames only and should be unique. 
 

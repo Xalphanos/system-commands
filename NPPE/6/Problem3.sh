@@ -1,3 +1,4 @@
+# Practice solution script for Problem3; see the embedded assignment notes.
 : '
 Given a file words.txt containing a string in each line in the format FIRST_second. Every string is a combination of two words joined with an underscore(_), the first word FIRST consists of all uppercase letters and the second word second consists of all lowercase letters. Write a bash command/script using sed to convert all the string to SECOND_first.
 After conversion

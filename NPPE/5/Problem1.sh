@@ -1,3 +1,4 @@
+# Practice solution script for Problem1; see the embedded assignment notes.
 : 'We want to change the file permissions of "someFile.txt" file as follows.
 
 user: execute

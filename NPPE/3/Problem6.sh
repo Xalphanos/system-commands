@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 Write a bash script that accepts an integer as argument and prints the corresponding day of week in capitals as given in the table below.
 

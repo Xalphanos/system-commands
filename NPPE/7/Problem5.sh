@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Write an awk script that reads a value n from the stdin within awk script, then prints the sum of odd numbers and sum of even numbers each on a separate line respectively, from the set of natural numbers from 1 to n (ends inclusive).
 '

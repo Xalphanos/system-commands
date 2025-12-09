@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Consider a file named data.txt in the current working directory.
 Write a script to determine if this file has more than 16 lines or not.

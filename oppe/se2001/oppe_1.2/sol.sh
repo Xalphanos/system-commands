@@ -1,3 +1,4 @@
+# Reference solution script for the oppe_1.2 task.
 input=$(cat)
 sum=0
 

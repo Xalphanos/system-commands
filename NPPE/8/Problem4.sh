@@ -1,3 +1,4 @@
+# Practice solution script for Problem4; see the embedded assignment notes.
 : '
 Given a file that contains current years board exam scores of students in all the schools in an area. Each line in the file contains four comma-separated fields: school code, roll number of the student, name of the student, and marks in the below format.
 

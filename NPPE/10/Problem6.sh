@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 EmployeeDetails.csv file contains the Employee ID, Employee Name, Leaves taken this year and Gender, of all the employees working in a company XYZ, born between the years 1997 and 2000 (including both). Total employees in the company is less than 1000.
 

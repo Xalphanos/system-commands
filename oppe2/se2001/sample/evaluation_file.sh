@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# Autograder harness: wraps the student script and runs bundled test cases.
 
 RANDOM_NUMBER=$RANDOM
 RANDOM_FILE=/tmp/$RANDOM_NUMBER

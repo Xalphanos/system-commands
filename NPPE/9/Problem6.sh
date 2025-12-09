@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 A software company has published some best practices for writing the code. One of the best practice mentioned is that if no line in your code should exceed 50 characters in total including all type of characters or spaces.
 

@@ -1,3 +1,4 @@
+# Practice solution script for Problem1; see the embedded assignment notes.
 : '
 Write a bash script that takes any number of inputs(all numbers) and prints the maximum and minimum value from all the inputs in the format Maximum: max | Minimum: min, where max is the maximum value and min is the minimum value.
 '

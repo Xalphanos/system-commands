@@ -1,3 +1,4 @@
+# Practice solution script for Problem3; see the embedded assignment notes.
 : '
 Given a shell variable month supposed to contain a string value corresponding to some calendar month. Use the cal command to create a file named as X.txt where X is the string value in the variable month. Your command should also create a file named error.txt that should contain the error message if the string month does not correspond to any calendar month. Create all the files in the current working directory.
 

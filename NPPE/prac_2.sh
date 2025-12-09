@@ -1,3 +1,4 @@
+# Practice shell exercise for NPPE; processes input per the task comments.
 #~/bin/bash
 
 lower=()

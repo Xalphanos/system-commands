@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Write a bash script that accepts a few arguments(all numbers) and performs the following functions.
 Prints the string Error if the number of arguments supplied is not equal to 2.

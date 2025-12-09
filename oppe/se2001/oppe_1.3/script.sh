@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Print a triangle with n rows of consecutive Fibonacci numbers.
 # Read n from standard input
 read -r n
 
@@ -28,4 +29,3 @@ for ((i = 1; i <= n; i++)); do
     # End of row
     printf "\n"
 done
-

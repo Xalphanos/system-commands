@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 Mine the logs given in the file myauth.log present in the current working directory to print all the usernames  to which user student switched to using su command. 
 Note: switching back to the previous user should not be accounted.

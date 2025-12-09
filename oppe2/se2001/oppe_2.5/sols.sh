@@ -1,3 +1,4 @@
+# Reference solution script for the oppe_2.5 task.
 BEGIN {
     FS = ","   # input fields separated by commas
     OFS = ","  # output fields also separated by commas

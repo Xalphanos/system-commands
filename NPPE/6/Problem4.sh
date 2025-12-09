@@ -1,3 +1,4 @@
+# Practice solution script for Problem4; see the embedded assignment notes.
 : '
 Given a file input.txt containing a word on each line, print all the words(one in each line) that occur between the words "FROM" and "TO"(but excluding these words). The match should be case sensitive for the given words and the words in the file are not unique, they can repeat.
 

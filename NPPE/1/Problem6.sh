@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 Consider a directory named "perf_folder" containing some files with different extensions, present in the current working directory. Write a bash script that accepts an argument(name of destination directory), adds a prefix string "program_" to the file names in the directory "perf_folder" meeting the below criteria.
 The file extension is ".c".

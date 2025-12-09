@@ -1,4 +1,5 @@
 #!/bin/bash
+# Reference solution script for the oppe_1.5 task.
 
 
 BEGIN{

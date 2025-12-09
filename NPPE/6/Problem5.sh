@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Write an awk script to find unintentionally repeated (duplicate) words in the file 'myfile.txt'. 
 For example, sometimes a file can contain sentences like "The the building is beautiful". 

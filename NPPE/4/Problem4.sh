@@ -1,3 +1,4 @@
+# Practice solution script for Problem4; see the embedded assignment notes.
 : '
 Each line in the file employees.csv contains the name, role and division of employees separated by a comma. Every line corresponds to one employee. The user wants to collect the details of employees who are managers in the R&D division. For managers the string for the role is ‘Manager’ and the division string for employees working in the R&D division is ‘R&D’.
 

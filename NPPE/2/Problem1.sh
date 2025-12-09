@@ -1,3 +1,4 @@
+# Practice solution script for Problem1; see the embedded assignment notes.
 : 'Write a Bash command to print the file types of all the files stored in the current working directory. The output should be in the format as described below. The first column is file/directory name and the second column tells about the file type.
 
 file.txt:                             empty

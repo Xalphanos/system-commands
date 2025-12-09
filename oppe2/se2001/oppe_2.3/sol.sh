@@ -1,4 +1,5 @@
 #!/bin/bash
+# Reference solution script for the oppe_2.3 task.
 
 
 read -r n

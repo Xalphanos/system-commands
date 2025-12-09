@@ -1,3 +1,4 @@
+# Practice solution script for Problem1; see the embedded assignment notes.
 : 'We have a file named "systemcommands.txt" in the present working directory.Write a Bash command to change its permissions to
 
 user: read, write, execute

@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Write an Awk command to print the first field of the all the lines containing more than 20 characters in the file marks.csv. The field separator in the file is comma (,).
 '

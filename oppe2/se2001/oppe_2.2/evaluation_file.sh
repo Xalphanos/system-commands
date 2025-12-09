@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Autograder harness: wraps the student script and runs bundled test cases.
 
 err(){
   echo "Error: $*"

@@ -1,3 +1,4 @@
+# Practice solution script for Problem2; see the embedded assignment notes.
 :'
 Write a Bash command to print the number of failed login attempts which are recorded in the file myauth.log located in the current working directory.
 

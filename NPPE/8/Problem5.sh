@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 Write a script using AWK to print the file with the maximum number of lines. 
 Assume only one file that have the maximum number of line among the given files.

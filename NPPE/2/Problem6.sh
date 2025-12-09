@@ -1,3 +1,4 @@
+# Practice solution script for Problem6; see the embedded assignment notes.
 : '
 Write a bash script that prints the sum of all even numbers of an array of numbers. The array variable is named as number_arr. 
 '

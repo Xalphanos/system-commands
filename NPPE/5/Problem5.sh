@@ -1,3 +1,4 @@
+# Practice solution script for Problem5; see the embedded assignment notes.
 : '
 A finance company called `Fintech` does not have its own analytics team, rather they outsources their analytics work to external vendors. The company maintains a file for each investor they are interested in, with the filename in the format 'firstname_lastname' in the directory 'data'(directory 'data' is in the current working directory). They do not want to make their investor details public so they rename each investor file to the hash value of filename before giving it to the external vendors and store the mapping in the file named map. Assume that no two investors have same combination of 'firstname' and 'lastname'.
 

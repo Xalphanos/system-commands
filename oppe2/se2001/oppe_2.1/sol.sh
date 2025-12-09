@@ -1,4 +1,5 @@
 #!/bin/bash
+# Reference solution script for the oppe_2.1 task.
 
 
 while IFS=: read -r user x uid gid name home shell; do

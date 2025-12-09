@@ -1,3 +1,4 @@
+# Practice solution script for Problem3; see the embedded assignment notes.
 : '
 In the lines that start with a digit, if there is a words "delta"(case sensitive) replace it with the word "gamma". 
 Replace only the first occurrence of the word "delta" in the desired lines. 

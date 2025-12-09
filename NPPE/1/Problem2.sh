@@ -1,3 +1,4 @@
+# Practice solution script for Problem2; see the embedded assignment notes.
 :'
 encoding-key is a file located at the path /encryption/two-level/binary/positive-offset/(directory 'encryption' is located in current working directory) . 
 The file encoding-key is updated often and shared between multiple users. This file is important to you and you are worried that the file could be deleted by mistake.

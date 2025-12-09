@@ -1,4 +1,5 @@
 #!/bin/bash
+# Practice shell exercise for NPPE; processes input per the task comments.
 
 
 while read -r line; do 

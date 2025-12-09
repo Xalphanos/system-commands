@@ -1,3 +1,4 @@
+# Practice solution script for Problem1; see the embedded assignment notes.
 : 'Write a bash script that takes a number as an argument and prints "Yes" if the number is a prime number, else prints "No".
 '
 

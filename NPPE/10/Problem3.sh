@@ -1,3 +1,4 @@
+# Practice solution script for Problem3; see the embedded assignment notes.
 : '
 Given some raw programming files, we want them to adhere to the company guidelines. Write a sed script that will run for all ".sh" files in the current directory and print the contents after performing the following actions. You just need to write the sed script, running that for all the files will be taken care of by our driver bash script.
 
