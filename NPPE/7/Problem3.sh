@@ -25,6 +25,21 @@ Hints:
 Use while getopts style code.
 Use sed to find the count of lines as specified in the conditions aboce.
 '
+# Documentation:
+# Purpose: Support options to report counts from a given file using only `sed`.
+# Inputs:
+# - Any number of options from `-l`, `-w`, `-n`, `-s <str>`.
+# - The last argument is treated as the file path.
+# Output: For each option appearance, prints the corresponding count on a new line.
+# How it works:
+# - Captures the filename as the last argument via `${@: -1}`.
+# - Uses `getopts` to read options in order, allowing repeats.
+# - For each option:
+#   - `-l`: uses `sed -n "$="` to count all lines.
+#   - `-w`: splits on spaces to one token per line, drops empties, then counts.
+#   - `-n`: selects digit-only lines, then counts them.
+#   - `-s str`: selects lines containing `str`, then counts.
+# Notes: If no valid options are supplied, the script prints nothing.
 #Solution
 script() { echo '
 filename=${@: -1}

@@ -13,6 +13,18 @@ For example email id of Ram having employee id as A1998001 is A1998001@xyz.com. 
 Write an awk script that that takes the file EmployeeDetails.csv as input and prints the email ids of all the female employees of the company in the same sequence as the employee details appear in the file EmployeeDetails.csv.
 
 '
+# Documentation:
+# Purpose: Print email IDs for female employees in order.
+# Inputs: `EmployeeDetails.csv` in current directory.
+# Output: One email per female employee.
+# How it works (syntax notes):
+# - Writes an awk program to `yourScript.awk`.
+# - `BEGIN{ FS="," }` sets CSV separator.
+# - For each line:
+#   - `$1` is EmployeeID, `$4` is Gender.
+#   - `Gender ~ /Female/` checks if field 4 contains "Female".
+#   - Prints `EmployeeID@xyz.com`.
+# - Runs awk with `awk -f yourScript.awk EmployeeDetails.csv`.
 #Solution
 script(){ echo '
 BEGIN{  

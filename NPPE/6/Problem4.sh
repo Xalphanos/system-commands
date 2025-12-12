@@ -34,6 +34,14 @@ SOME
 from
 '
 
+# Documentation:
+# Purpose: Print all lines occurring between `FROM` and `TO` markers.
+# Inputs: File `input.txt` in the current directory.
+# Output: The intervening lines (excluding the marker lines).
+# How it works:
+# - `sed -n '/FROM/,/TO/p'` prints each inclusive block from `FROM` to the next `TO`.
+# - Subsequent `sed` commands delete lines that are exactly `FROM` or `TO`.
+# Notes: Matching is case sensitive as required.
 #Solution:
 script() { 
 # Solution 1

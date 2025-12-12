@@ -15,6 +15,18 @@ For e.g. if the value of state = “Andhra Pradesh”, one such pin code is 5150
 
 Hint: First find the first digit that represents the given state.
 '
+# Documentation:
+# Purpose: Count pincodes in a given state whose first digit equals last digit.
+# Inputs:
+# - Environment variable `state` holding a state name.
+# - File `Pincode_info.csv` in the current directory.
+# Output: A single integer count.
+# How it works:
+# - Finds the first pincode for the state and extracts its first digit.
+# - Searches all state lines for pincodes matching:
+#   `<firstDigit>....<firstDigit>` (same starting and ending digit).
+# - `wc -l` counts those matches.
+# Notes: Alternative solution uses a backreference-based regex.
 #Solution
 script() { 
 number=`egrep -i "$state" Pincode_info.csv | head -1 | egrep -o [0-9]{6} | cut -c1`

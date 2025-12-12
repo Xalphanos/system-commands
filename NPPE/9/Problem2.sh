@@ -10,6 +10,17 @@ Contents of myauth.log is given below
 ......
 '
 
+# Documentation:
+# Purpose: From `myauth.log`, list users that `student` successfully switched to using `su`.
+# Inputs: File `myauth.log` in the current directory.
+# Output: Target usernames, one per line, in log order.
+# How it works (syntax notes):
+# - `egrep "\\bsu\\b"` finds lines containing the word `su` (`\\b` = word boundary).
+# - `grep -v FAILED` removes failed su attempts (`-v` means invert match).
+# - `egrep "\\(to .*\\)" -o` prints only the `(to USER)` part (`-o` = only match).
+# - `egrep "\\b\\w*\\b" -o` extracts word tokens from that part.
+# - `grep -v to` drops the literal word `to`, leaving usernames.
+# Notes: Does not de-duplicate; repeated switches will repeat in output.
 # Solution
 script() {
 egrep "\bsu\b" myauth.log | grep -v FAILED | egrep "\(to .*\)" -o | egrep "\b\w*\b" -o | grep -v to 

@@ -5,8 +5,17 @@ If no .txt file exists redirect the error of your command to the file noFiles.tx
 
 Hint: Make use of redirection to file and operators to write solution in one line.
 '
+# Documentation:
+# Purpose: List `.txt` files and report success/failure using redirection.
+# Inputs: `.txt` files in current directory (may be none).
+# Output:
+# - On success: long listing of `.txt` files in `textFiles.txt` and prints `found`.
+# - On failure: error message in `noFiles.txt` and prints nothing.
+# How it works:
+# - `ls -l *.txt` expands to all `.txt` files; stdout goes to `textFiles.txt`.
+# - `2> noFiles.txt` captures any "no matches" errors.
+# - `&& echo found` runs only if `ls` succeeded (i.e., files existed).
 #Solution
 script(){
 ls -l *.txt > textFiles.txt 2> noFiles.txt && echo found
 }
-

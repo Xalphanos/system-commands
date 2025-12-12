@@ -6,6 +6,16 @@ Create a file ek in the current working directory, such that it is always in syn
 if encoding-key gets deleted by any chance the content in it should be available in file ek.
 '
 
+# Documentation:
+# Purpose: Keep a backup `ek` always in sync with `encoding-key`.
+# Inputs: File `/encryption/two-level/binary/positive-offset/encoding-key`.
+# Output: A hard-linked file `ek` (here created at `/ek`) that mirrors the original.
+# How it works:
+# - Ensures the directory path and `encoding-key` exist (practice scaffolding).
+# - Creates a hard link named `ek` pointing to `encoding-key`.
+# - Because it's a hard link, both names refer to the same inode:
+#   editing either updates the other, and deleting `encoding-key` does not lose data
+#   as long as `ek` remains.
 #Solution
 script() {
 mkdir -p /encryption/two-level/binary/positive-offset/

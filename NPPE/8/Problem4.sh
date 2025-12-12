@@ -11,6 +11,15 @@ Write an AWK script to print the roll numbers of the toppers of each school.For 
 
 Test case description: Input is the contents of the input file. Your script does not need to read any input. Output is the expected output from your script. Your script may print expected roll numbers in any order, evaluation script sorts the input before printing.
 '
+# Documentation:
+# Purpose: Print roll numbers of toppers for each school.
+# Inputs: A CSV file (`data`) with fields: school code, roll no, name, marks.
+# Output: One topper roll number per school (order not important).
+# How it works:
+# - awk tracks the maximum marks seen per school in `max[school]`.
+# - When a new maximum is found, stores that student’s roll no in `max_student[school]`.
+# - In `END`, iterates over schools and prints each stored roll number.
+# Notes: The wrapper sorts output to match typical graders.
 #Solution
 script() {
 echo '

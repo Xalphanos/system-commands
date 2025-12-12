@@ -23,6 +23,15 @@ vanish into the night?
 Write a command to print the number of non-empty lines that do not contain an article (a, an, the) in it. The command should print a number that is the count of lines, and should not print the lines.
 '
 
+# Documentation:
+# Purpose: Count non-empty poem lines that do not contain articles `a`, `an`, or `the`.
+# Inputs: File `poem` in the current directory.
+# Output: One integer count.
+# How it works:
+# - First `grep` matches whole-word articles using word boundaries and `-v` inverts
+#   the match to keep only lines without those articles.
+# - Second `grep -e "\\w"` removes empty/whitespace-only lines.
+# - `wc -l` counts the remaining lines.
 #Solution:
 script() {
 grep -e "\ba\b\|\ban\b\|\bthe\b" poem -v | grep -e "\w" | wc -l

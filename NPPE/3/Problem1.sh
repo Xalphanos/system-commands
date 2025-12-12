@@ -12,6 +12,14 @@ mkdir level3
 cd ..
 cd ..
 '
+# Documentation:
+# Purpose: Move to the `level2` directory and confirm the location.
+# Inputs: None; assumes the directory structure `/level1/level2` exists.
+# Output: Prints the absolute path of `level2`.
+# How it works:
+# - `cd /level1/level2` changes the working directory directly to `level2`.
+# - `pwd` prints the resulting current directory path.
+# Notes: Wrapped in `script()` for reuse.
 #Solution
 script() {
 cd /level1/level2

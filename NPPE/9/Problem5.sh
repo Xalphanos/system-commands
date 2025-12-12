@@ -6,6 +6,14 @@ RollNo,Subject1,Subject2,Subject3,So on...
 Write an Awk command to print all the roll numbers(RollNo) in the file.
 '
 
+# Documentation:
+# Purpose: Print the first CSV field (roll number) from every line.
+# Inputs: `marks.csv` in the current directory.
+# Output: One roll number per line.
+# How it works (syntax notes):
+# - `-F,` tells awk the field separator is a comma.
+# - `$1` means “first field of the current line”.
+# - `{print $1}` prints that field for every record.
 #Solution:
 script() {
 awk -F, '{print $1}' marks.csv

@@ -18,6 +18,17 @@ $ awk -f yourScript.awk groceries.csv Tomato 3
 120
 
 '
+# Documentation:
+# Purpose: Compute total cost for buying `n` units of a given grocery item.
+# Inputs:
+# - `groceries.csv` in the current directory (comma-separated, item in field 2, cost in field 3).
+# - Command-line args: `$1` = item name, `$2` = number of units.
+# Output: One integer total cost.
+# How it works:
+# - Writes an awk program to `yourScript.awk`.
+# - awk scans each row, compares field 2 to the requested item.
+# - When it matches, multiplies unit cost (field 3) by `n`, prints result, and exits.
+# - The wrapper passes `item` and `n` as awk variables with `-v`.
 #Solution
 script() { echo '
 

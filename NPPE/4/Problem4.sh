@@ -5,6 +5,14 @@ Each line in the file employees.csv contains the name, role and division of empl
 Write a command to collect the required details and redirect the output to a file named “info.csv”. "info.csv" should contain the name, role and division (separated by a comma) of each employee (as per the above criteria) on a separate line.
 '
 
+# Documentation:
+# Purpose: Filter `employees.csv` for R&D managers and save to `info.csv`.
+# Inputs: `employees.csv` in the current directory.
+# Output: `info.csv` containing matching CSV rows.
+# How it works:
+# - First `grep -i "manager"` selects lines with role "Manager" in any case.
+# - Second `grep "R&D"` narrows to R&D division.
+# - `> info.csv` writes the selected lines, preserving original CSV formatting.
 #Solution:
 script() {
 grep -i "manager" employees.csv | grep "R&D" > info.csv

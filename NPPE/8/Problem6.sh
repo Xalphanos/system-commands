@@ -15,6 +15,18 @@ Write an awk script takes the file EmployeeDetails.csv as input and prints the n
 Sample
 Suppose your awk script is named as yourScript.awk. For the below sample file the lowest number of leaves taken by any employee is 5. And there are two employees who have taken only 5 leaves, print both employee names on a separate line.
 '
+# Documentation:
+# Purpose: Print the name(s) of employee(s) with the fewest leaves taken.
+# Inputs: `EmployeeDetails.csv` in the current directory.
+# Output: One or more employee names, one per line.
+# How it works:
+# - Writes an awk program to `yourScript.awk` and runs it.
+# - Initializes `lowc` to the leaves value of the first record and stores its name.
+# - For each subsequent record:
+#   - If leaves < `lowc`, resets the list to this new minimum.
+#   - If leaves == `lowc`, appends the name to the list.
+# - In `END`, prints all stored names.
+# Notes: Non-matching/header lines are not specially handled, matching the practice code.
 #Solution:
 script() { echo '
 BEGIN{

@@ -5,6 +5,14 @@ Print the number of lines present in ‘file1’ and ‘file2’ combined, your 
 
 Hint: Multiple files can be given as argument to ‘cat’ command.
 '
+# Documentation:
+# Purpose: Count total lines across `file1` and `file2`.
+# Inputs: `file1` and `file2` in the current directory.
+# Output: A single integer line count.
+# How it works:
+# - `cat file1 file2` concatenates both files to STDOUT.
+# - `wc -l` counts the number of newline-terminated lines in the combined stream.
+# Notes: Alternative commented solutions show other equivalent approaches.
 #Solution
 script() { 
 cat file1 file2 | wc -l

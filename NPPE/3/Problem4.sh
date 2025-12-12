@@ -13,6 +13,18 @@ For  e.g. if 'pincode=515002' then your command should display 'Andhra Pradesh A
 Note: If your solution has more than one line, add a semicolon after each line.
 '
 
+# Documentation:
+# Purpose: For a given pincode, print its Circle and Division names.
+# Inputs:
+# - Environment variable `pin` holding a 6-digit pincode.
+# - File `Pincode_info.csv` in the current directory.
+# Output: `"<CircleName> <DivisionName>"` on one line.
+# How it works:
+# - Finds the CSV line containing `$pin`.
+# - Extracts the substring ending with `Circle` and trims the trailing word.
+# - Extracts the `,X Division` part, removes the leading comma and trailing word.
+# - Prints the two cleaned names separated by a space.
+# Notes: Uses simple `grep`/substring operations instead of full CSV parsing.
 #Solution:
 script() { 
 circle=`grep $pin Pincode_info.csv | grep -e ".* Circle" -o`

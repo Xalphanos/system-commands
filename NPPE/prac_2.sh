@@ -1,4 +1,49 @@
-# Practice shell exercise for NPPE; processes input per the task comments.
+# Documentation:
+# This file is a collection of practice drafts/snippets.
+# Many sections are incomplete or have syntax errors, so it may not run as-is.
+# Below are the intended ideas for each block to help exam prep.
+#
+# Block 1 (arrays lower/upper):
+# - Intention: read filenames, put names containing uppercase letters into `upper`,
+#   and the rest into `lower`.
+# - Key syntax you should know:
+#   - `lower=()` makes an empty array; `lower+=("x")` appends.
+#   - `[ -z "$name" ]` checks empty string (spaces around `]` are required).
+#   - `[[ "$name" =~ [A-Z] ]]` regex‑matches uppercase letters.
+#   - `for v in "${lower[@]}"` loops over array elements.
+#
+# Block 2 (sum/min/max):
+# - Intention: loop over numeric args, compute sum, min, max.
+# - Correct syntax reminders:
+#   - No spaces around `=` in assignments: `sum=0`.
+#   - Use arithmetic expansion for math: `sum=$((sum + num))`.
+#   - Numeric comparisons use `-lt`, `-gt`, etc inside `[ ]`.
+#
+# Block 3 (sum of odd-positioned input lines):
+# - Intention: read numbers into array `nums`, sum elements at odd positions.
+# - Syntax:
+#   - `"${!nums[@]}"` gives array indices.
+#   - `$((i+1))` arithmetic for 1-based position.
+#
+# Block 4 (check package install status from log):
+# - Intention: read a package name, grep its actions, print Installed/Not installed.
+# - Syntax:
+#   - `if [ "$#" -ne 1 ]; then ... fi` checks arg count.
+#   - `grep "$pkg:" file | awk 'END{print $3}'` prints last action.
+#
+# Block 5 (sum and max of numeric args):
+# - Intention: ignore non-numbers, compute sum and maximum.
+# - Syntax:
+#   - `[[ "$arg" =~ ^[0-9]+$ ]]` checks digits only.
+#
+# Block 6 (move files by extension):
+# - Intention: move `.c/.py` to `code/`, images to `images/`.
+# - Syntax:
+#   - `case "$file" in pattern) ... ;; esac`.
+#
+# Block 7/8 (sed/awk fragments):
+# - Intention: show sample sed swap rule and awk max-by-subject idea.
+# - Treat these as notes, not runnable code here.
 #~/bin/bash
 
 lower=()
@@ -191,6 +236,5 @@ END {
 
 
 sed -
-
 
 

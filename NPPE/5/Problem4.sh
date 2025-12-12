@@ -8,6 +8,17 @@ Hint:
 arr=(`ls`) # Each element in arr corresponds to the output from the ls
 '
 
+# Documentation:
+# Purpose: Split project filenames into lowercase and uppercase roll-number arrays.
+# Inputs: Files in the current directory named like `YYYYhhhhhh` (year + 6 hex chars).
+# Output: Two arrays:
+# - `lower`: filenames containing only lowercase hex letters (or digits).
+# - `upper`: filenames containing any uppercase hex letters.
+# How it works:
+# - First `egrep` selects names matching the roll-number pattern.
+# - Second filter for `lower` keeps names with lowercase letters (or all digits).
+# - Second filter for `upper` keeps names with uppercase letters.
+# Notes: Uses `ls` output as the source list.
 #Solution:
 script() {
 #lower=(`ls | grep "^[0-9]\{4\}[0-9a-f]\{6\}"`)

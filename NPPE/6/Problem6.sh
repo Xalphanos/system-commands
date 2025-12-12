@@ -12,6 +12,17 @@ For example email id of Ram having employee id as A1998001 is A1998001@xyz.com. 
 
 Write an awk script that takes input as file EmployeeDetails.csv and calculate and prints the average number of leaves taken by the employees born in each year from 1997 to 2000(both 1997 and 2000 included). The average for each year should be printed on a newline starting from the year 1997 to 2000 in the same sequence i.e. your script should print 4 lines of output always one for each year 1997, 1998, 1999 and 2000. If there are no employees born in some year, print 0 for that years average leaves. Print only the integer part of the average(i.e. if the average is 7.3333 print 7). Use int() function to get the integer part of any float number.
 '
+# Documentation:
+# Purpose: Compute average leaves taken per birth year (1997–2000).
+# Inputs: `EmployeeDetails.csv` in the current directory.
+# Output: Four lines: integer averages for 1997, 1998, 1999, 2000 (in order).
+# How it works:
+# - Writes an awk program to `yourScript.awk` and runs it.
+# - awk parses CSV with comma field separator.
+# - Extracts birth year from employee ID via `substr(EID, 2, 4)`.
+# - Sums leaves and counts employees per year.
+# - In `END`, divides sums by counts (0 if none) and prints `int(average)` per year.
+# Notes: Non-matching/header lines are ignored by the year checks.
 #Solution
 script () { echo '
 BEGIN{

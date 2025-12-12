@@ -10,6 +10,14 @@ If the argument is greater than 9 print ERROR
 
 Hint: Use case statement.
 '
+# Documentation:
+# Purpose: Map an integer to a day-of-week name.
+# Inputs: One integer argument.
+# Output: Day name in capitals, or `ERROR` if argument > 9.
+# How it works:
+# - A `case` statement matches the argument against allowed numbers.
+# - `1|8` map to SUNDAY, `2|9` to MONDAY, and so on.
+# - Any other value falls through to the `*` case, printing `ERROR`.
 #Solution
 script() { 
 case $1 in

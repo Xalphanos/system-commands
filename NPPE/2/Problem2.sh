@@ -6,6 +6,15 @@ The file names in documents.txt should be separated by a single space.
 
 Hint: Use echo to solve this with a single command.
 '
+
+# Documentation:
+# Purpose: Generate all filenames of the form `file_xyN.txt` and store them.
+# Inputs: None; uses Bash brace expansion.
+# Output: `documents.txt` containing all combinations separated by spaces.
+# How it works:
+# - `file_{a..z}{a..z}{0..4}.txt` expands to 26×26×5 filenames.
+# - `echo` prints the expanded list space-separated.
+# - `>` redirects the list into `documents.txt`, overwriting any previous content.
 #Solution
 script() {
 echo file_{a..z}{a..z}{0..4}.txt > documents.txt

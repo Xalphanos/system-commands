@@ -8,6 +8,16 @@ We will use the command chmod XXX someFile.txt where XXX represents a 3 digit nu
 For e.g. If your think the command chmod 111 someFile.txt will change the permission of file someFile.txt as mentioned above, then your solution should create a file named 111.digits in the current working directory.
 '
 
+# Documentation:
+# Purpose: Record the octal permission digits needed for a chmod command.
+# Inputs: None; based on the permission specification in the prompt.
+# Output: Creates an empty file named `<digits>.digits` in the current directory.
+# How it works:
+# - Translates permissions to octal:
+#   - user: execute only = 1
+#   - group: read + execute = 4 + 1 = 5
+#   - others: write only = 2
+# - Touches `152.digits` to indicate `chmod 152 someFile.txt`.
 #Solution
 script() { 
 touch 152.digits

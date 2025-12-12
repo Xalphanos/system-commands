@@ -2,6 +2,15 @@
 : '
 Write a bash script that prints the sum of all even numbers of an array of numbers. The array variable is named as number_arr. 
 '
+# Documentation:
+# Purpose: Sum all even integers provided on STDIN.
+# Inputs: A whitespace-separated list of numbers read into array `number_arr`.
+# Output: The sum of even numbers as a single integer.
+# How it works:
+# - `read -a number_arr` reads a line of numbers into an array.
+# - Iterates through each element.
+# - Uses modulo (`num % 2`) to test evenness.
+# - Accumulates even numbers into `sum`, then prints `sum`.
 #Solution
 script(){
 read -a number_arr

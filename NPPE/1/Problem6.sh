@@ -21,6 +21,22 @@ and output of running command ls perf_programs in your current working directory
 
 program_set_perf_input.c	program_perf_params.c
 '
+
+# Documentation:
+# Purpose: Rename and move certain `.c` files from `perf_folder`.
+# Inputs:
+# - Directory `perf_folder` in the current directory.
+# - Destination directory name as `$1`.
+# Output:
+# - Files in `perf_folder` matching `*perf*.c` are renamed with prefix `program_`
+#   and moved into the destination directory.
+# How it works:
+# - Checks whether destination directory exists using `ls -d $1`.
+# - If not, creates it with `mkdir $1`.
+# - Enters `perf_folder` and loops over files matching shell glob `*perf*.c`
+#   (only `.c` files whose names contain `perf`).
+# - Moves each match to `../$1/` while adding the `program_` prefix.
+# Notes: Uses `mv` so files are removed from `perf_folder` after moving.
 #Solution:
 script() { 
 # If directory as argument one is not present, create it.

@@ -6,6 +6,18 @@ Given a bash script that intends to print the names of all .c files that contain
 
 The awk script within this bash script to check the files as per above condition is missing in the code, complete that
 '
+# Documentation:
+# Purpose: Print names of `.c` files that have any line longer than 50 chars.
+# Inputs: All `*.c` files in current directory (driver above may create samples).
+# Output: Violating filenames, one per line.
+# How it works (syntax notes):
+# - Outer `for file in *.c; do ... done` loops over each C file.
+# - awk program:
+#   - `BEGIN { flag=0 }` runs once before reading lines.
+#   - For each line, `length($0)` gives line length; if >50 set `flag=1`.
+#   - `END { if (flag==1) print FILENAME }` runs after file ends and prints
+#     the file name only if a long line was seen.
+# - `$0` is the full current line in awk; `FILENAME` is current file name.
 #Solution
 eof="EOF"
 while read file; do

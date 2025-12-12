@@ -51,6 +51,19 @@ Expected output for above data
 
 35245
 '
+# Documentation:
+# Purpose: Sum investment amounts for hashed investors listed in `result`.
+# Inputs:
+# - `result`: list of hashed filenames (one per line).
+# - `map`: mapping from hash to real file path (`hash path` per line).
+# - `data/firstname_lastname` files containing an `INVESTMENT $<amount>` line.
+# Output: One integer: total investment amount for all hashes in `result`.
+# How it works:
+# - Loops over each hash in `result`.
+# - Scans `map` to find the matching real file path.
+# - Greps the `INVESTMENT` line from that file and strips the prefix to get amount.
+# - Accumulates amounts into `sum` and prints it at the end.
+# Notes: Assumes unique hashes and valid map entries as per prompt.
 #Solution
 script() { 
   sum=0

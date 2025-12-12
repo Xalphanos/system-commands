@@ -10,6 +10,21 @@ Also, the function "active_sleep" is deprecated and we do not have an immediate 
 After every 10th line (in line numbers 10, 20, 30,... ) add a line with four hashes such as "####" after applying all the above actions.
 
 '
+# Documentation:
+# Purpose: Create a sed script `myscript.sed` to enforce several file rules.
+# Inputs: None here; the grader runs `myscript.sed` on `.sh` files later.
+# Output: File `myscript.sed` containing sed commands.
+# How it works (syntax notes):
+# - `#!/usr/bin/sed -f` makes the output a runnable sed script.
+# - `1 i\...` inserts a line before line 1 (top copyright).
+# - `$ a\...` appends a line after last line (bottom copyright).
+# - `/pattern/i\...` inserts before function header matches.
+# - `/pattern/a\...` appends after `}` lines (function end).
+# - `s/background_sleep/inactive_sleep/g` global substitution.
+# - `/\\bactive_sleep/ i\...` inserts TODO line before any line containing that word.
+# - `10~9 i\####` inserts `####` after every 10th line
+#   (`10~9` means starting at line 10, then every 9 lines after).
+# - `col` just cleans up spacing; then redirection writes to `myscript.sed`.
 #Solution
 echo '
 #!/usr/bin/sed -f
